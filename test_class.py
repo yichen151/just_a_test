@@ -22,6 +22,23 @@ class HotFishModel(FishModel):
 		else:
 			print('No')
 
+class FreshFishModel(FishModel):
+	def __init__(self, num):
+		FishModel.__init__(self, num)
+		self.fresh = True
+		
+	def change_status(self):
+		if self.fresh is True:
+			self.fresh = False
+		else:
+			self.fresh = True
+			
+	def is_fresh(self):
+		if self.fresh is True:
+			print('Yes')
+		else:
+			print('No')
+			
 if __name__ == '__main__':
 	fish = FishModel(num=10)
 	fish.count()
