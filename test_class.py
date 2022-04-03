@@ -1,13 +1,13 @@
 class FishModel:
-	def __init__(self, num=0):
-		self.num = num
+	def __init__(self, num):
+		self.num = num * 10
 
 	def count(self):
 		print(self.num)
 
 class HotFishModel(FishModel):
-	def __init__(self, num=0):
-		self.num = num
+	def __init__(self, num):
+		FishModel.__init__(self, num)
 		self.hot = True
 
 	def change_status(self):
