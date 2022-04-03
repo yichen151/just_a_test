@@ -1,6 +1,6 @@
 class FishModel:
 	def __init__(self, num):
-		self.num = num * 10
+		self.num = num * 30
 
 	def count(self):
 		print(self.num)
